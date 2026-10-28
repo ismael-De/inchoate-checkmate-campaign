@@ -1,0 +1,258 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inchoate Checkmate — Kickstarter preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07090c;--ink:#efe7d6;--mut:#a69e8c;--gold:#d9b45a;--gold2:#f3dc96;--teal:#1f6f5f;--wine:#7c1f2c;--card:#10151a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:repeating-conic-gradient(#ffffff05 0 25%,transparent 0 50%) 0 0/120px 120px;pointer-events:none;z-index:-1}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:Cinzel,serif;letter-spacing:.02em}
+.wrap{max-width:1160px;margin:auto;padding:0 24px}
+.ksbar{background:#05c46b;color:#022;font:700 13px Inter;text-align:center;padding:7px}
+.ksbar span{opacity:.75;font-weight:500}
+/* hero */
+.hero{position:relative;min-height:780px;display:flex;align-items:flex-end;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(assets/08.jpg) center 30%/cover;filter:saturate(1.1);transform:scale(1.05)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#07090c22 0%,#07090c55 45%,#07090c 96%),radial-gradient(circle at 80% 20%,transparent 30%,#07090ccc 90%)}
+.hero .in{position:relative;z-index:2;padding:0 24px 64px;max-width:1160px;margin:auto;width:100%}
+.eyebrow{font:700 12px Inter;letter-spacing:.35em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:"Cinzel Decorative",serif;font-weight:900;font-size:clamp(44px,8vw,104px);line-height:.95;margin:14px 0;background:linear-gradient(180deg,#fff6d8,#d9b45a 60%,#8a6a22);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 6px 30px #000)}
+.hero .sub{font-size:clamp(18px,2.2vw,24px);max-width:700px;color:#f1e9d7}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.chip{border:1px solid #d9b45a66;background:#0b0f13aa;backdrop-filter:blur(6px);padding:6px 14px;border-radius:99px;font-size:13px;color:var(--gold2)}
+/* fund box */
+.fund{display:grid;grid-template-columns:1.6fr 1fr;gap:36px;margin-top:-10px;padding:40px 24px}
+.video{position:relative;border-radius:14px;overflow:hidden;border:1px solid #d9b45a44;box-shadow:0 30px 80px #000c,0 0 0 6px #d9b45a10;aspect-ratio:16/9;background:#000}
+.video video{width:100%;height:100%;object-fit:cover}
+.vlabel{position:absolute;left:12px;top:12px;background:#000a;padding:4px 10px;border-radius:6px;font-size:12px;color:var(--gold2)}
+.stats{background:linear-gradient(160deg,#121920,#0a0e12);border:1px solid #ffffff14;border-radius:14px;padding:28px}
+.bar{height:10px;background:#ffffff14;border-radius:9px;overflow:hidden;margin:6px 0 22px}
+.bar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#05c46b,#7cf0b3)}
+.big{font:700 34px Inter;color:#05e07a}
+.lab{color:var(--mut);font-size:14px}
+.ph{display:inline-block;background:#7c1f2c;color:#ffd9de;font:700 10px Inter;letter-spacing:.1em;padding:2px 7px;border-radius:4px;vertical-align:middle;margin-left:6px}
+.cta{display:block;width:100%;margin-top:22px;padding:16px;border:0;border-radius:10px;background:linear-gradient(180deg,#f3dc96,#c99a35);color:#1a1205;font:800 17px Inter;cursor:pointer;box-shadow:0 10px 30px #d9b45a44}
+.by{margin-top:18px;font-size:14px;color:var(--mut);border-top:1px solid #ffffff14;padding-top:16px}
+/* sections */
+section{padding:90px 0}
+.st{text-align:center;margin-bottom:46px}
+.st h2{font-size:clamp(30px,4.4vw,50px);color:var(--gold2)}
+.st p{color:var(--mut);max-width:680px;margin:10px auto 0}
+.orn{display:flex;align-items:center;gap:14px;justify-content:center;color:var(--gold);margin-bottom:10px;font-size:20px}
+.orn:before,.orn:after{content:"";height:1px;width:80px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn:after{transform:scaleX(-1)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.two h3{font-size:30px;color:var(--gold2);margin-bottom:12px}
+.two p{color:#d8d0bf;margin-bottom:12px}
+.frame{border-radius:14px;overflow:hidden;border:1px solid #d9b45a55;box-shadow:0 24px 60px #000b;position:relative}
+.frame figcaption{position:absolute;bottom:0;left:0;right:0;padding:24px 14px 10px;background:linear-gradient(transparent,#000d);font-size:12px;color:var(--gold2)}
+.pull{font-family:Cinzel,serif;font-size:clamp(24px,3.2vw,38px);text-align:center;max-width:900px;margin:auto;line-height:1.35;color:#fff3cf}
+.pull em{color:var(--gold);font-style:normal}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{background:linear-gradient(180deg,#121a20,#0b0f13);border:1px solid #ffffff12;border-radius:16px;padding:26px 22px;position:relative;overflow:hidden}
+.step b{font:900 54px "Cinzel Decorative";color:#d9b45a22;position:absolute;right:12px;top:-6px}
+.step .i{font-size:30px;color:var(--gold)}
+.step h4{font:700 19px Cinzel;margin:10px 0 6px;color:var(--gold2)}
+.step p{color:var(--mut);font-size:15px}
+.types{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+.ty{border-radius:12px;padding:16px;text-align:center;font:700 15px Cinzel;border:1px solid}
+.ty small{display:block;font:400 13px Inter;color:var(--mut);margin-top:4px}
+.gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:220px;gap:14px;margin-top:40px}
+.gal div{border-radius:12px;background-size:cover;background-position:center;border:1px solid #ffffff18}
+.gal .t{grid-row:span 2}
+/* AI */
+.ai{background:radial-gradient(ellipse at 30% 50%,#1f6f5f33,transparent 60%),linear-gradient(180deg,#080b0e,#0b1214 50%,#080b0e)}
+.loop{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.loop span{border:1px solid #2fae8f88;color:#9ff0d8;padding:6px 12px;border-radius:8px;font-size:14px;background:#0f2a24}
+.nn{aspect-ratio:1;border-radius:50%;border:1px solid #2fae8f55;position:relative;background:radial-gradient(circle,#2fae8f22,transparent 65%)}
+.nn svg{width:100%;height:100%}
+/* team */
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.mem{text-align:center;background:#0e1317;border:1px solid #ffffff12;border-radius:16px;padding:24px 14px}
+.av{width:110px;height:110px;margin:0 auto 14px;border-radius:50%;background-size:cover;background-position:center;border:2px solid var(--gold);box-shadow:0 0 0 6px #d9b45a14}
+.mem h4{font:700 17px Cinzel;color:var(--gold2)}
+.role{font-size:12px;color:#e08a96;font-weight:700;margin:4px 0 8px;min-height:34px}
+.mem p{font-size:14px;color:var(--mut)}
+.jo{margin-top:26px;text-align:center;color:var(--mut)}
+/* tiers */
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tier{position:relative;background:linear-gradient(170deg,#141c22,#0a0d10);border:1px solid #d9b45a33;border-radius:18px;padding:26px 20px 20px;display:flex;flex-direction:column;overflow:hidden;transition:.25s}
+.tier:hover{transform:translateY(-6px);border-color:var(--gold)}
+.tglow{position:absolute;top:-60px;right:-60px;width:160px;height:160px;border-radius:50%;background:radial-gradient(#d9b45a33,transparent 70%)}
+.tier.feat{border:2px solid var(--gold);box-shadow:0 0 50px #d9b45a33}
+.tag{position:absolute;top:14px;right:14px;background:var(--wine);color:#ffd9de;font:700 11px Inter;padding:3px 9px;border-radius:99px;letter-spacing:.05em}
+.tic{font-size:48px;line-height:1;color:var(--gold);text-shadow:0 0 20px #d9b45a66}
+.tp{font:800 30px Inter;margin-top:8px}
+.tier h4{font:700 20px Cinzel;color:var(--gold2)}
+.tier p{color:var(--mut);font-size:14px;margin:6px 0 10px}
+.tier ul{list-style:none;font-size:14px;flex:1}
+.tier li{padding:4px 0 4px 20px;position:relative;border-top:1px dashed #ffffff12}
+.tier li:before{content:"◆";position:absolute;left:0;color:var(--gold);font-size:10px;top:8px}
+.tm{font-size:12px;color:var(--mut);margin:12px 0 10px}
+.tier button{padding:11px;border-radius:9px;border:1px solid var(--gold);background:transparent;color:var(--gold2);font:700 14px Inter}
+.tier.feat button{background:var(--gold);color:#1a1205}
+/* stretch */
+.sgs{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.sgs:before{content:"";position:absolute;top:44px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--gold),#d9b45a22)}
+.sg{text-align:center;padding:0 14px;position:relative}
+.sgi{width:88px;height:88px;margin:0 auto;border-radius:50%;display:grid;place-items:center;font-size:38px;background:#0e1317;border:2px solid var(--gold);color:var(--gold2);box-shadow:0 0 30px #d9b45a33}
+.sga{font:800 22px Inter;margin-top:14px;color:#05e07a}
+.sg h4{font:700 19px Cinzel;color:var(--gold2)}
+.sg p{font-size:14px;color:var(--mut)}
+/* budget */
+.bud{display:grid;grid-template-columns:340px 1fr;gap:60px;align-items:center}
+.donut{width:320px;height:320px;border-radius:50%;background:conic-gradient(#d9b45a 0% 35%,#2fae8f 35% 60%,#c0505f 60% 70%,#6c7bd1 70% 78%,#a77ad6 78% 88%,#8a8a8a 88% 100%);position:relative;box-shadow:0 0 60px #0008}
+.donut:after{content:"";position:absolute;inset:62px;border-radius:50%;background:var(--bg)}
+.donut div{position:absolute;inset:0;display:grid;place-content:center;text-align:center;z-index:2}
+.donut b{font:800 38px Inter}
+.blist{list-style:none}
+.blist li{display:grid;grid-template-columns:18px 1fr 60px 90px;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #ffffff12}
+.blist i{width:14px;height:14px;border-radius:4px}
+.blist b{text-align:right}.blist em{text-align:right;color:var(--mut);font-style:normal}
+.note{margin-top:16px;font-size:13px;color:#e8a9b2;background:#7c1f2c22;border:1px solid #7c1f2c88;padding:10px 14px;border-radius:8px}
+/* road */
+.road{display:grid;grid-template-columns:repeat(7,1fr);position:relative}
+.road:before{content:"";position:absolute;top:9px;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold) 60%,#ffffff22 60%)}
+.rs{padding:0 8px;position:relative}
+.rdot{width:20px;height:20px;border-radius:50%;background:var(--gold);border:4px solid var(--bg);box-shadow:0 0 0 2px var(--gold)}
+.rs.now .rdot{background:#05e07a;box-shadow:0 0 0 2px #05e07a,0 0 20px #05e07a}
+.rs:nth-child(n+6) .rdot{background:#333;box-shadow:0 0 0 2px #555}
+.rd{font:700 13px Inter;color:var(--gold);margin-top:12px;letter-spacing:.05em}
+.rs h4{font:700 16px Cinzel;color:var(--gold2);margin:4px 0}
+.rs p{font-size:13px;color:var(--mut)}
+/* risks/faq */
+.risk{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.risk div{background:#0e1317;border-left:3px solid var(--wine);border-radius:10px;padding:20px}
+.risk h4{font:700 17px Cinzel;color:var(--gold2);margin-bottom:6px}.risk p{font-size:15px;color:var(--mut)}
+details{border:1px solid #ffffff14;border-radius:12px;margin-bottom:12px;background:#0d1216}
+summary{padding:18px 22px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+summary:after{content:"+";color:var(--gold);font-size:22px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{padding:0 22px 18px;color:var(--mut)}
+footer{padding:60px 24px;text-align:center;color:var(--mut);border-top:1px solid #ffffff12;font-size:14px}
+footer h3{font-family:"Cinzel Decorative";color:var(--gold);font-size:28px;margin-bottom:8px}
+@media(max-width:900px){.fund,.two,.bud{grid-template-columns:1fr}.steps,.types,.tiers{grid-template-columns:1fr 1fr}.team{grid-template-columns:1fr 1fr}.sgs{grid-template-columns:1fr 1fr;row-gap:30px}.sgs:before{display:none}.road{grid-template-columns:1fr;gap:22px;padding-left:10px}.road:before{left:19px;top:0;bottom:0;width:2px;height:auto;right:auto}.rs{display:grid;grid-template-columns:30px 1fr;column-gap:10px}.rs>*:not(.rdot){grid-column:2}.rs .rdot{grid-row:1/4}.rd{margin-top:0}.risk{grid-template-columns:1fr}.donut{margin:auto}.gal{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.gal .t{grid-row:span 1;grid-column:span 2}.reverse>:first-child{order:2}}
+@media(max-width:560px){.steps,.types,.tiers,.team{grid-template-columns:1fr}.blist li{grid-template-columns:18px 1fr 44px 70px;font-size:14px}.donut{width:260px;height:260px}.donut:after{inset:50px}section{padding:64px 0}.hero{min-height:640px}}
+</style></head><body>
+<div class="ksbar">PREVIEW of the Kickstarter page <span>· not live · numbers marked PLACEHOLDER need confirming</span></div>
+<header class="hero"><div class="bg"></div><div class="in">
+<div class="eyebrow">Echo-V · Amman, Jordan · PC / Steam</div>
+<h1>Inchoate<br>Checkmate</h1>
+<p class="sub">Chess, with every rule you know. Cards, that change everything. A dark-fantasy strategy game where every move begins with a card.</p>
+<div class="chips"><span class="chip">♟ Chess + card strategy</span><span class="chip">✦ AI opponent trained by self-play</span><span class="chip">⚑ Made in Jordan</span><span class="chip">Rookie Awards 2026 entry</span></div>
+</div></header>
+<div class="wrap fund">
+<div class="video"><video src="assets/trailer.mp4" poster="assets/12.jpg" controls muted loop playsinline></video><span class="vlabel">▶ Campaign video slot (current: 15s motion teaser)</span></div>
+<div class="stats">
+<div class="big">$0</div><div class="lab">pledged of <b style="color:var(--ink)">$15,000</b> goal <span class="ph">PLACEHOLDER</span></div>
+<div class="bar"><i></i></div>
+<div class="big" style="color:var(--ink)">0</div><div class="lab">backers</div><br>
+<div class="big" style="color:var(--ink)">30</div><div class="lab">days to go</div>
+<button class="cta">Back this project</button>
+<div class="by">Created by <b style="color:var(--ink)">Echo-V</b>, an indie studio of five graduates from Al-Balqa Applied University, Amman. Campaign launched on Kickstarter by our family member in the USA.</div>
+</div></div>
+
+<section><div class="wrap">
+<p class="pull">What if chess had <em>surprise</em>?<br>What if the board could <em>fight back</em>?</p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap two">
+<div><div class="eyebrow">The story</div><h3>An old game. A new kind of war.</h3>
+<p>We love chess. We also love card games, where every hand feels new. So we asked a simple question: what happens if you put them together?</p>
+<p>Inchoate Checkmate is the answer. The rules of chess stay the same. But on top of the board sits a deck of cards. Each card can trap, shield, swap, boost or destroy pieces. You still need to think like a chess player, but now you also need to adapt like a card player.</p>
+<p>It is built in Unity by five friends from Amman, with hand-made 3D pieces, illustrated cards, custom shaders and effects, and a dark-fantasy world all its own.</p></div>
+<figure class="frame"><img src="assets/12.jpg" alt="In-game board with the card hand"><figcaption>In-engine: the board and the card hand (real gameplay)</figcaption></figure>
+</div></section>
+
+<section style="background:linear-gradient(180deg,transparent,#0c1115,transparent)"><div class="wrap">
+<div class="st"><div class="orn">♞</div><h2>How a turn works</h2><p>Easy to learn if you know chess. Different every single match.</p></div>
+<div class="steps">
+<div class="step"><b>1</b><div class="i">🂠</div><h4>Draw</h4><p>Draw a card from the shared deck at the start of your turn.</p></div>
+<div class="step"><b>2</b><div class="i">✦</div><h4>Charge</h4><p>Collect Nexar energy, the power that fuels your cards.</p></div>
+<div class="step"><b>3</b><div class="i">⚡</div><h4>Cast</h4><p>Spend Nexar to play one card and bend the battlefield.</p></div>
+<div class="step"><b>4</b><div class="i">♞</div><h4>Move</h4><p>Make a normal chess move. Checkmate still wins.</p></div>
+</div>
+<div class="types">
+<div class="ty" style="border-color:#c0505f;background:#c0505f14;color:#ffb3bd">Offensive<small>Strike and destroy</small></div>
+<div class="ty" style="border-color:#a77ad6;background:#a77ad614;color:#dcc4ff">Curse<small>Trap and weaken</small></div>
+<div class="ty" style="border-color:#2fae8f;background:#2fae8f14;color:#a6f2dc">Defensive<small>Shield and protect</small></div>
+<div class="ty" style="border-color:#d9b45a;background:#d9b45a14;color:#f3dc96">Blessing<small>Boost and swap</small></div>
+</div>
+<div class="gal">
+<div class="t" style="background-image:url(assets/18.jpg)"></div>
+<div style="background-image:url(assets/20.jpg);background-position:center 20%"></div>
+<div style="background-image:url(assets/21.jpg);background-position:center 20%"></div>
+<div style="background-image:url(assets/45.jpg)"></div>
+<div style="background-image:url(assets/10.jpg)"></div>
+</div>
+</div></section>
+
+<section class="ai"><div class="wrap two reverse">
+<div class="nn"><svg viewBox="0 0 400 400" fill="none" stroke="#2fae8f" stroke-width="1"><g opacity=".55" id="lines"></g><g id="nodes"></g><text x="200" y="372" fill="#9ff0d8" font-family="Cinzel" font-size="16" text-anchor="middle">self-play loop</text></svg></div>
+<div><div class="eyebrow" style="color:#5fe0bd">The opponent</div><h3>An AI that taught itself to play</h3>
+<p>A normal chess engine breaks when cards change the rules every turn. So we did not write one. We trained our AI through <b>self-play</b>: it played against itself again and again, and slowly learned which cards to play and when.</p>
+<p>At first it played badly. Then it got better. The day it beat its own programmer for the first time, we knew it was real.</p>
+<div class="loop"><span>Play itself</span><span>→ Win or lose</span><span>→ Learn</span><span>→ Play again</span></div>
+<p style="margin-top:14px;font-size:14px;color:var(--mut)">With your support we can train it longer and give it different difficulty levels, from friendly to ruthless.</p></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="st"><div class="orn">♜</div><h2>Crafted piece by piece</h2><p>Every piece is hand-modelled by our artists, from sketch to shader.</p></div>
+<div class="two"><figure class="frame"><img src="assets/16.jpg" alt="Early sketches"><figcaption>Early sketches and card concepts</figcaption></figure><figure class="frame"><img src="assets/41.jpg" alt="3D pieces"><figcaption>Final 3D pieces in Unity</figcaption></figure></div>
+</div></section>
+
+<section style="background:#0a0e11"><div class="wrap">
+<div class="st"><div class="orn">♛</div><h2>Meet Echo-V</h2><p>Five graduates of Al-Balqa Applied University. Four animation artists and one computer scientist, building a world-class PC game from Jordan.</p></div>
+<div class="team"><div class="mem"><div class="av" style="background-image:url(assets/ph_k.jpg)"></div><h4>Ismael Sarhan</h4><div class="role">Lead Programmer & Systems Architect</div><p>Built the game's core architecture, the card and turn systems and the self-play AI. The only CS graduate on the team. Also helps with music.</p></div><div class="mem"><div class="av" style="background-image:url(assets/ph_r.jpg)"></div><h4>Rahmeh Abuserieh</h4><div class="role">Lead Design & 2D/3D Artist</div><p>Led the visual direction, drew the 2D concepts, designed the UI and modelled the core 3D chess pieces.</p></div><div class="mem"><div class="av" style="background-image:url(assets/ph_d.jpg)"></div><h4>Dania Saleh</h4><div class="role">Gameplay Designer & Technical Artist</div><p>Works on gameplay, technical art, shaders and VFX, and helps with programming systems.</p></div><div class="mem"><div class="av" style="background-image:url(assets/ph_f.jpg)"></div><h4>Fatemah Abu Obaida</h4><div class="role">Visual Development & 3D Modeler</div><p>Shapes the world and creates many of the 3D assets you see on the board.</p></div><div class="mem"><div class="av" style="background-image:url(assets/ph_c.jpg)"></div><h4>Cecilia Mukattash</h4><div class="role">Narrative Designer & 3D Modeler</div><p>Writes the lore and story direction, and helps with 3D modelling.</p></div></div>
+<p class="jo">Our mission: prove that great PC games can be made in the Middle East.</p>
+</div></section>
+
+<section id="rewards"><div class="wrap">
+<div class="st"><div class="orn">♚</div><h2>Choose your piece</h2><p>All rewards are digital. No shipping, anywhere in the world. Prices in USD. <span class="ph">PLACEHOLDER PRICES</span></p></div>
+<div class="tiers"><div class="tier" id="tier0"><div class="tglow"></div>
+<div class="tic">♟</div><div class="tp">$1</div><h4>Pawn's Oath</h4><p>Say thank you and follow the journey.</p><ul><li>Backer-only updates</li><li>Digital thank-you card</li></ul><div class="tm">Estimated delivery <b>Jan 2027</b></div><button>Pledge $1</button></div><div class="tier" id="tier1"><div class="tglow"></div>
+<div class="tic">♙</div><div class="tp">$5</div><h4>The Squire</h4><p>Your name in the game credits, forever on the board.</p><ul><li>Your name in the credits</li><li>Backer-only updates</li></ul><div class="tm">Estimated delivery <b>Dec 2027</b></div><button>Pledge $5</button></div><div class="tier" id="tier2"><div class="tglow"></div><span class="tag">Limited: 300</span>
+<div class="tic">♘</div><div class="tp">$15</div><h4>Early Gambit</h4><p>Early bird price. The full game on Steam.</p><ul><li>Steam key (PC)</li><li>Your name in the credits</li></ul><div class="tm">Estimated delivery <b>Dec 2027</b></div><button>Pledge $15</button></div><div class="tier" id="tier3"><div class="tglow"></div>
+<div class="tic">♞</div><div class="tp">$20</div><h4>Knight's Move</h4><p>The full game on Steam when it launches.</p><ul><li>Steam key (PC)</li><li>Your name in the credits</li></ul><div class="tm">Estimated delivery <b>Dec 2027</b></div><button>Pledge $20</button></div><div class="tier feat" id="tier4"><div class="tglow"></div><span class="tag">Most popular</span>
+<div class="tic">♝</div><div class="tp">$35</div><h4>Bishop's Codex</h4><p>The game plus our digital art book: concepts, sketches and lore.</p><ul><li>Steam key (PC)</li><li>Digital art book (PDF)</li><li>HD wallpapers</li><li>Name in the credits</li></ul><div class="tm">Estimated delivery <b>Dec 2027</b></div><button>Pledge $35</button></div><div class="tier" id="tier5"><div class="tglow"></div>
+<div class="tic">♜</div><div class="tp">$60</div><h4>Rook's Vault</h4><p>Play before everyone else and own a card design only backers get.</p><ul><li>Closed beta access</li><li>Backer-exclusive card design</li><li>Art book + wallpapers</li><li>Steam key + credits</li></ul><div class="tm">Estimated delivery <b>Sep 2027</b></div><button>Pledge $60</button></div><div class="tier" id="tier6"><div class="tglow"></div>
+<div class="tic">♛</div><div class="tp">$120</div><h4>Queen's Court</h4><p>Bring a friend. Two keys and a card signed by the whole team.</p><ul><li>2 Steam keys</li><li>Digital card signed by all 5 devs</li><li>'Founding Backer' credit</li><li>Everything in Rook's Vault</li></ul><div class="tm">Estimated delivery <b>Sep 2027</b></div><button>Pledge $120</button></div><div class="tier" id="tier7"><div class="tglow"></div><span class="tag">Limited: 15</span>
+<div class="tic">♚</div><div class="tp">$350</div><h4>The King's Decree</h4><p>Design your own card with the team. It goes into the real game.</p><ul><li>Co-design a card with Echo-V</li><li>Your card added to the game</li><li>Video call with the team</li><li>Everything in Queen's Court</li></ul><div class="tm">Estimated delivery <b>Dec 2027</b></div><button>Pledge $350</button></div></div>
+</div></section>
+
+<section style="background:linear-gradient(180deg,#0a0e11,var(--bg))"><div class="wrap">
+<div class="st"><div class="orn">✦</div><h2>Stretch goals</h2><p>If we pass our goal, here is what we unlock together. <span class="ph">IDEAS TO CONFIRM</span></p></div>
+<div class="sgs"><div class="sg"><div class="sgi">♞</div><div class="sga">$20,000</div><h4>Online Duels</h4><p>Play friends online with ranked matches.</p></div><div class="sg"><div class="sgi">✦</div><div class="sga">$27,000</div><h4>Arabic & More Languages</h4><p>Full Arabic interface plus extra languages.</p></div><div class="sg"><div class="sgi">♛</div><div class="sga">$35,000</div><h4>A New Faction</h4><p>A third army with new pieces and cards.</p></div><div class="sg"><div class="sgi">♚</div><div class="sga">$45,000</div><h4>Story Campaign</h4><p>A lore campaign written by Cecilia, with boss duels.</p></div></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="st"><div class="orn">◆</div><h2>Where your money goes</h2><p>A small team in Amman can do a lot with a little. Every dollar goes into finishing the game.</p></div>
+<div class="bud"><div class="donut"><div><b>$15,000</b><span class="lab">goal (placeholder)</span></div></div>
+<div><ul class="blist"><li><i style="background:#d9b45a"></i><span>Programming & game systems</span><b>35%</b><em>$5,250</em></li><li><i style="background:#2fae8f"></i><span>Art, 3D & animation</span><b>25%</b><em>$3,750</em></li><li><i style="background:#c0505f"></i><span>Music & sound</span><b>10%</b><em>$1,500</em></li><li><i style="background:#6c7bd1"></i><span>Testing, Steam & release</span><b>8%</b><em>$1,200</em></li><li><i style="background:#a77ad6"></i><span>Kickstarter & payment fees</span><b>10%</b><em>$1,500</em></li><li><i style="background:#8a8a8a"></i><span>Taxes & safety buffer</span><b>12%</b><em>$1,800</em></li></ul><div class="note">Suggested split for Ismael to confirm. Kickstarter takes 5% plus about 3–5% payment fees, and US taxes fall on the campaign owner.</div></div></div>
+</div></section>
+
+<section style="background:#0a0e11"><div class="wrap">
+<div class="st"><div class="orn">♝</div><h2>The road to checkmate</h2><p>Where we have been, and where we are going. Future dates are estimates.</p></div>
+<div class="road"><div class="rs"><div class="rdot"></div><div class="rd">2025</div><h4>Echo-V is born</h4><p>Five graduates from Al-Balqa Applied University start the studio.</p></div><div class="rs"><div class="rdot"></div><div class="rd">May 2026</div><h4>First playable</h4><p>Graduation build in Unity: board, pieces, 7 ability cards.</p></div><div class="rs"><div class="rdot"></div><div class="rd">Jun 2026</div><h4>The Rookies</h4><p>Project entered in The Rookie Awards 2026.</p></div><div class="rs"><div class="rdot"></div><div class="rd">Nov 2026</div><h4>PG Connects Jordan</h4><p>We show the game to the industry in Aqaba.</p></div><div class="rs now"><div class="rdot"></div><div class="rd">Campaign</div><h4>Kickstarter</h4><p>You join us. Funding starts full production.</p></div><div class="rs"><div class="rdot"></div><div class="rd">Sep 2027</div><h4>Closed beta</h4><p>Backers play first and help us tune the cards.</p></div><div class="rs"><div class="rdot"></div><div class="rd">Dec 2027</div><h4>Steam launch</h4><p>Full release on PC. Keys go out to every backer.</p></div></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="st"><div class="orn">⚑</div><h2>Risks &amp; challenges</h2><p>We want to be honest with you.</p></div>
+<div class="risk">
+<div><h4>We are a new studio</h4><p>This is our first commercial game. To keep scope safe, we only promise PC and digital rewards, and stretch goals only start after the base game is safe.</p></div>
+<div><h4>Balance takes time</h4><p>Cards can break chess if we are not careful. The closed beta gives backers a voice and gives us months of testing before launch.</p></div>
+<div><h4>Cross-border campaign</h4><p>Kickstarter does not support Jordan yet, so a family member in the USA runs the account. We will share updates every month and keep everything open.</p></div>
+</div></div></section>
+
+<section style="padding-top:0"><div class="wrap" style="max-width:860px">
+<div class="st"><div class="orn">?</div><h2>FAQ</h2></div><details open><summary>Who is running this campaign?</summary><p>Echo-V is a five-person indie studio in Amman, Jordan. Kickstarter does not support creators in Jordan yet, so the campaign is launched by our family member in the United States, who manages the account and payments for the team. The game, the team and all the work are in Jordan.</p></details><details open><summary>What platform is the game for?</summary><p>PC (Windows) on Steam. We may look at other platforms later, but we will only promise PC.</p></details><details open><summary>Do I need to know chess?</summary><p>It helps, but no. If you know how the pieces move, you can play. The cards teach you the rest.</p></details><details open><summary>Is there multiplayer?</summary><p>Local play and the AI opponent are the base plan. Online play is a stretch goal.</p></details><details open><summary>When do digital rewards arrive?</summary><p>Steam keys, art book and credits come at launch. Beta access comes before launch. All rewards are digital, so there is no shipping cost anywhere in the world.</p></details><details open><summary>Can I change my pledge?</summary><p>Yes, any time before the campaign ends, on Kickstarter.</p></details>
+</div></section>
+
+<footer><h3>Echo-V</h3>Inchoate Checkmate · Made with love in Amman, Jordan<br>See our Rookies entry: therookies.co/entries/51466 · Meet us at PG Connects Jordan, Aqaba, 7–8 Nov 2026</footer>
+<script>
+(function(){const L=document.getElementById('lines'),N=document.getElementById('nodes');const ns='http://www.w3.org/2000/svg';const cols=[[90,[110,170,230,290]],[200,[90,150,210,270,330]],[310,[140,200,260]]];
+for(let c=0;c<2;c++)for(const a of cols[c][1])for(const b of cols[c+1][1]){const l=document.createElementNS(ns,'line');l.setAttribute('x1',cols[c][0]);l.setAttribute('y1',a);l.setAttribute('x2',cols[c+1][0]);l.setAttribute('y2',b);L.appendChild(l)}
+const sy=['♟','♞','♝','♜','♛'];cols.forEach((c,i)=>c[1].forEach((y,j)=>{const g=document.createElementNS(ns,'circle');g.setAttribute('cx',c[0]);g.setAttribute('cy',y);g.setAttribute('r',16);g.setAttribute('fill','#0f2a24');g.setAttribute('stroke','#5fe0bd');N.appendChild(g);const t=document.createElementNS(ns,'text');t.setAttribute('x',c[0]);t.setAttribute('y',y+6);t.setAttribute('text-anchor','middle');t.setAttribute('fill','#d9b45a');t.setAttribute('font-size','16');t.setAttribute('stroke','none');t.textContent=sy[(i+j)%5];N.appendChild(t)}));})();
+</script></body></html>
